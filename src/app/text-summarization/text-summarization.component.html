@@ -1,0 +1,41 @@
+<div class="bg-yellow-500 text-center">
+  <h1 class="py-4 text-4xl font-extrabold ">AI Text Summarization</h1>
+</div>
+
+<ng-container>
+  <form [formGroup]="form">
+    <div class="grid grid-cols-2 gap-x-4 mx-12 mt-12">
+
+      <div class="flex flex-col">
+        <p class="text-lg font-medium">Text</p>
+        <mat-form-field appearance="outline" class="max-w-[90%]  ">
+          <textarea class="" maxlength="600" matInput cdkTextareaAutosize cdkAutosizeMinRows="14" cdkAutosizeMaxRows="5"
+            aria-label="text description" placeholder="Enter your text" formControlName="textDescription"
+            #autosize="cdkTextareaAutosize"></textarea>
+          <!-- <mat-error *ngIf="description.errors?.['required']"> Description is mandatory.</mat-error> -->
+        </mat-form-field>
+      </div>
+
+      <div class="mt-10">
+        <div class="max-w-[90%] min-h-[380px] border-2 border-amber-200 rounded">
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex mt-4 space-x-12">
+      <input type="file" name="file" id="file" accept=".csv" class="hidden" />
+
+      <label for="file" mat-flat-button
+        class="cursor-pointer flex px-3 py-1 bg-amber-500 items-center rounded-lg text-white border-2 border-amber-500 shadow-xl hover:text-amber-500 hover:bg-white">
+        <mat-icon>file_upload</mat-icon>&nbsp;Browse
+      </label>
+
+      <button class="cursor-pointer flex px-8 py-1 bg-amber-500 items-center rounded-lg text-white border-2 border-amber-500 shadow-xl hover:text-amber-500 hover:bg-white" (click)="openDialog()">Submit</button>
+
+    </div>
+  </form>
+
+  <ng-container>

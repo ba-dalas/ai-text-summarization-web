@@ -1,0 +1,31 @@
+<div class="m-8">
+  <form [formGroup]="form">
+    <div class="flex flex-col">
+      <p class="text-lg font-medium">Text Minlength</p>
+      <div class="flex ">
+        <mat-form-field appearance="outline" class="max-w-[100%] grow">
+          <input maxlength="30" aria-label="min-length" matInput type="number" placeholder="Enter minlength here"
+            formControlName="minLength">
+          <!-- <mat-error *ngIf="propertyTagName.errors?.['required']"> Property Tag Name is mandatory.</mat-error> -->
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <p class="text-lg font-medium">Text Maxlength</p>
+      <div class="flex ">
+        <mat-form-field appearance="outline" class="max-w-[100%] grow">
+          <input maxlength="500" aria-label="max-length" matInput type="number" placeholder="Enter maxlength here"
+            formControlName="maxLength">
+          <!-- <mat-error *ngIf="propertyTagName.errors?.['required']"> Property Tag Name is mandatory.</mat-error> -->
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="flex">
+      <button class="cursor-pointer flex px-8 py-1 bg-amber-500 items-center rounded-lg text-white border-2 border-amber-500 shadow-xl hover:text-amber-500 hover:bg-white">Submit</button>
+    </div>
+
+
+  </form>
+</div>
