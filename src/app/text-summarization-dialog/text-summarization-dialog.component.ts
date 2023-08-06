@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -24,8 +24,8 @@ export class TextSummarizationDialogComponent {
 
   createForm() {
     this.form = this.fb.group({
-      minLength: [''],
-      maxLength: [''],
+      minLength: ['', [Validators.required]],
+      maxLength: ['', [Validators.required]],
 
     })
   }
