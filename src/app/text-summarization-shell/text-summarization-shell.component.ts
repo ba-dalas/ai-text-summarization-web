@@ -16,7 +16,6 @@ export class TextSummarizationShellComponent {
 
 
   openDialog(event:any){
-
       const dialogRef = this.dialog.open(TextSummarizationDialogComponent, {
         height: '400px',
         width: '600px',
@@ -24,7 +23,7 @@ export class TextSummarizationShellComponent {
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
+        console.log('The dialog was closed' , result);
 
       });
 
