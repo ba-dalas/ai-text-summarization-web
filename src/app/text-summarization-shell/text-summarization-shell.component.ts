@@ -8,11 +8,21 @@ import { TextSummarizationDialogComponent } from '../text-summarization-dialog/t
   styleUrls: ['./text-summarization-shell.component.scss']
 })
 export class TextSummarizationShellComponent {
+  selectedFile !: File;
 
 
   constructor(public dialog: MatDialog) {}
 
 
+
+  getFileEmitter(event: any){
+    this.selectedFile = event;
+    let formData = new FormData();
+    formData.append("file", this.selectedFile);
+
+
+
+  }
 
 
   openDialog(event:any){
