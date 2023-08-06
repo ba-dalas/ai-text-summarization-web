@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     TextSummarizationComponent,
     TextSummarizationShellComponent,
-    TextSummarizationDialogComponent
+    TextSummarizationDialogComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { TextSummarizationDialogComponent } from '../text-summarization-dialog/t
 })
 export class TextSummarizationShellComponent {
   selectedFile !: File;
+  isLoading = false;
 
 
   constructor(public dialog: MatDialog) {}
@@ -19,8 +20,8 @@ export class TextSummarizationShellComponent {
     this.selectedFile = event;
     let formData = new FormData();
     formData.append("file", this.selectedFile);
-
-
+    this.isLoading = true;
+    setTimeout( () => this.isLoading = false, 2000 );
 
   }
 
@@ -38,5 +39,11 @@ export class TextSummarizationShellComponent {
       });
 
   }
+
+
+  // load() : void {
+  //   this.isLoading = true;
+  //   setTimeout( () => this.isLoading = false, 2000 );
+  // }
 
 }
